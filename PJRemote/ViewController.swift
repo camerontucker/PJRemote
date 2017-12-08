@@ -30,6 +30,36 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func computerButton(_ sender: UIButton) {
+        guard let client = client else { return }
+        
+        switch client.connect(timeout: 10) {
+        case .success:
+            appendToTextField(string: "Connected to host \(client.address)")
+            appendToTextField(string: client.read(until: "\r")!)
+            if let response = sendRequest(string: "%1INPT 31\r", using: client) {
+                appendToTextField(string: "Response: \(response)")
+            }
+        case .failure(let error):
+            appendToTextField(string: String(describing: error))
+        }
+    }
+    
+    @IBAction func appleTVButton(_ sender: UIButton) {
+        guard let client = client else { return }
+        
+        switch client.connect(timeout: 10) {
+        case .success:
+            appendToTextField(string: "Connected to host \(client.address)")
+            appendToTextField(string: client.read(until: "\r")!)
+            if let response = sendRequest(string: "%1INPT 33\r", using: client) {
+                appendToTextField(string: "Response: \(response)")
+            }
+        case .failure(let error):
+            appendToTextField(string: String(describing: error))
+        }
+    }
+    
     private func sendRequest(string: String, using client: Client) -> String? {
         appendToTextField(string: "Sending data ... ")
         

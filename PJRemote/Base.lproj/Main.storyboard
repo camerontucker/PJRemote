@@ -19,27 +19,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="logging" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ubf-pl-TTf">
-                                <rect key="frame" x="8" y="383" width="359" height="276"/>
+                                <rect key="frame" x="8" y="294" width="359" height="365"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBe-P7-qCd">
-                                <rect key="frame" x="165.5" y="159" width="43" height="30"/>
+                                <rect key="frame" x="166" y="70" width="43" height="30"/>
                                 <state key="normal" title="status"/>
                                 <connections>
                                     <action selector="status:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fLb-qg-OHW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpK-P0-ndz">
+                                <rect key="frame" x="225" y="170" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="4tw-x7-iPa"/>
+                                </constraints>
+                                <state key="normal" title="AppleTV"/>
+                                <connections>
+                                    <action selector="appleTVButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nJR-wz-51F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4m-Q3-8u8">
+                                <rect key="frame" x="50" y="170" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="AO3-Jo-Kjk"/>
+                                </constraints>
+                                <state key="normal" title="Computer"/>
+                                <connections>
+                                    <action selector="computerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aAm-xj-vQF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pBe-P7-qCd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="139" id="08F-cA-exO"/>
+                            <constraint firstItem="pBe-P7-qCd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="08F-cA-exO"/>
                             <constraint firstItem="Ubf-pl-TTf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="EMZ-M3-pgI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vpK-P0-ndz" secondAttribute="trailing" constant="50" id="GYP-xI-SFY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ubf-pl-TTf" secondAttribute="bottom" constant="8" id="Lzl-Bx-Nhn"/>
                             <constraint firstItem="pBe-P7-qCd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vvy-nJ-ZrC"/>
+                            <constraint firstItem="J4m-Q3-8u8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="W0v-xL-kcl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ubf-pl-TTf" secondAttribute="trailing" constant="8" id="Xra-gK-e5E"/>
+                            <constraint firstItem="vpK-P0-ndz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="uZK-e7-ByN"/>
                             <constraint firstItem="Ubf-pl-TTf" firstAttribute="top" secondItem="pBe-P7-qCd" secondAttribute="bottom" constant="194" id="uZb-lD-Af0"/>
+                            <constraint firstItem="J4m-Q3-8u8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="ufo-ph-x7Y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
