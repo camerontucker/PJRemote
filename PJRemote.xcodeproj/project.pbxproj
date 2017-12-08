@@ -12,6 +12,10 @@
 		32671EE91FD9E649000950C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32671EE71FD9E649000950C2 /* Main.storyboard */; };
 		32671EEB1FD9E649000950C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32671EEA1FD9E649000950C2 /* Assets.xcassets */; };
 		32671EEE1FD9E649000950C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32671EEC1FD9E649000950C2 /* LaunchScreen.storyboard */; };
+		32671EF61FDA07B3000950C2 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32671EF51FDA07B3000950C2 /* Client.swift */; };
+		32671EF81FDA0F9D000950C2 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32671EF71FDA0F9D000950C2 /* Config.plist */; };
+		32671EFB1FDA0FFC000950C2 /* ConfigTemplate.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32671EFA1FDA0FFC000950C2 /* ConfigTemplate.plist */; };
+		D1C636C81FB797BC5D11C43E /* Pods_PJRemote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A633D2B6C4ECA6AE05FE547E /* Pods_PJRemote.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,12 @@
 		32671EEA1FD9E649000950C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32671EED1FD9E649000950C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32671EEF1FD9E649000950C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32671EF51FDA07B3000950C2 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		32671EF71FDA0F9D000950C2 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		32671EFA1FDA0FFC000950C2 /* ConfigTemplate.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ConfigTemplate.plist; sourceTree = "<group>"; };
+		59B2DFEB3B42BD1393AE70FB /* Pods-PJRemote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PJRemote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PJRemote/Pods-PJRemote.debug.xcconfig"; sourceTree = "<group>"; };
+		A633D2B6C4ECA6AE05FE547E /* Pods_PJRemote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PJRemote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7DAD73D7A4DD7AFCFE8FB78 /* Pods-PJRemote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PJRemote.release.xcconfig"; path = "Pods/Target Support Files/Pods-PJRemote/Pods-PJRemote.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1C636C81FB797BC5D11C43E /* Pods_PJRemote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +51,8 @@
 			children = (
 				32671EE21FD9E649000950C2 /* PJRemote */,
 				32671EE11FD9E649000950C2 /* Products */,
+				5F5D4F265F29DB90CCB16412 /* Pods */,
+				B479EC9EFB7AF3B25FB3D71E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +73,36 @@
 				32671EEA1FD9E649000950C2 /* Assets.xcassets */,
 				32671EEC1FD9E649000950C2 /* LaunchScreen.storyboard */,
 				32671EEF1FD9E649000950C2 /* Info.plist */,
+				32671EF51FDA07B3000950C2 /* Client.swift */,
+				32671EF91FDA0FA6000950C2 /* Config */,
 			);
 			path = PJRemote;
+			sourceTree = "<group>";
+		};
+		32671EF91FDA0FA6000950C2 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				32671EFA1FDA0FFC000950C2 /* ConfigTemplate.plist */,
+				32671EF71FDA0F9D000950C2 /* Config.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		5F5D4F265F29DB90CCB16412 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59B2DFEB3B42BD1393AE70FB /* Pods-PJRemote.debug.xcconfig */,
+				A7DAD73D7A4DD7AFCFE8FB78 /* Pods-PJRemote.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B479EC9EFB7AF3B25FB3D71E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A633D2B6C4ECA6AE05FE547E /* Pods_PJRemote.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32671EF21FD9E649000950C2 /* Build configuration list for PBXNativeTarget "PJRemote" */;
 			buildPhases = (
+				2F2294FEDC469A5323417175 /* [CP] Check Pods Manifest.lock */,
 				32671EDC1FD9E649000950C2 /* Sources */,
 				32671EDD1FD9E649000950C2 /* Frameworks */,
 				32671EDE1FD9E649000950C2 /* Resources */,
+				2DF4F5CEC83BABBD729B0993 /* [CP] Embed Pods Frameworks */,
+				4CEFBD97F3C823B0EFA7C282 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,6 +167,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32671EFB1FDA0FFC000950C2 /* ConfigTemplate.plist in Resources */,
+				32671EF81FDA0F9D000950C2 /* Config.plist in Resources */,
 				32671EEE1FD9E649000950C2 /* LaunchScreen.storyboard in Resources */,
 				32671EEB1FD9E649000950C2 /* Assets.xcassets in Resources */,
 				32671EE91FD9E649000950C2 /* Main.storyboard in Resources */,
@@ -131,6 +177,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2DF4F5CEC83BABBD729B0993 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PJRemote/Pods-PJRemote-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftSocket/SwiftSocket.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSocket.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PJRemote/Pods-PJRemote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F2294FEDC469A5323417175 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PJRemote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CEFBD97F3C823B0EFA7C282 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PJRemote/Pods-PJRemote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		32671EDC1FD9E649000950C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -138,6 +238,7 @@
 			files = (
 				32671EE61FD9E649000950C2 /* ViewController.swift in Sources */,
 				32671EE41FD9E649000950C2 /* AppDelegate.swift in Sources */,
+				32671EF61FDA07B3000950C2 /* Client.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +373,7 @@
 		};
 		32671EF31FD9E649000950C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59B2DFEB3B42BD1393AE70FB /* Pods-PJRemote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +389,7 @@
 		};
 		32671EF41FD9E649000950C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7DAD73D7A4DD7AFCFE8FB78 /* Pods-PJRemote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

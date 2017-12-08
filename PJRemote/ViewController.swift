@@ -1,25 +1,56 @@
-//
-//  ViewController.swift
-//  PJRemote
-//
-//  Created by Cam Tucker on 2017-12-07.
-//  Copyright © 2017 Regent College. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet var loggingTextView: UITextView!
+    
+    var client: Client?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        guard let config = Bundle.main.path(forResource: "Config", ofType: "plist"),
+            let keys = NSDictionary(contentsOfFile: config),
+            let projectorIp = keys.value(forKey: "projectorIp") as? String else { return }
+        
+        client = Client(address: projectorIp, port: 4352)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func status(_ sender: UIButton) {
+        guard let client = client else { return }
+        
+        switch client.connect(timeout: 10) {
+        case .success:
+            appendToTextField(string: "Connected to host \(client.address)")
+            appendToTextField(string: client.read(until: "\r")!)
+            if let response = sendRequest(string: "%1INF1 ?\r", using: client) {
+                appendToTextField(string: "Response: \(response)")
+            }
+        case .failure(let error):
+            appendToTextField(string: String(describing: error))
+        }
+    }
+    
+    private func sendRequest(string: String, using client: Client) -> String? {
+        appendToTextField(string: "Sending data ... ")
+        
+        switch client.send(string: string) {
+        case .success:
+            return readResponse(from: client)
+        case .failure(let error):
+            appendToTextField(string: String(describing: error))
+            return nil
+        }
     }
 
-
+    private func readResponse(from client: Client) -> String? {
+        guard let response = client.read(until: "\r") else { return nil }
+        
+        return response
+    }
+    
+    private func appendToTextField(string: String) {
+        print(string)
+        loggingTextView.text = loggingTextView.text.appending("\n\(string)")
+    }
 }
 

@@ -1,0 +1,6 @@
+Config.plist
+
+build/
+DerivedData/
+
+.build/
